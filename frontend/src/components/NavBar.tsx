@@ -1,4 +1,5 @@
 import {AppBar, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 import {useState} from "react";
 
 function NavBar() {
@@ -39,7 +40,7 @@ function NavBar() {
                 <Toolbar>
                     <IconButton
                         color="inherit"
-                        aria-label="open drawer"
+                        aria-label="open blog title list"
                         edge="start"
                         onClick={handleDrawerToggle}
                         sx={{ mr: 2, display: { sm: 'none' } }}
@@ -47,7 +48,7 @@ function NavBar() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        Responsive drawer
+                        C FISH
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -57,7 +58,7 @@ function NavBar() {
                 onTransitionEnd={handleDrawerTransitionEnd}
                 onClose={handleDrawerClose}
                 ModalProps={{
-                    keepMounted: true, // Better open performance on mobile.
+                    keepMounted: true
                 }}
                 sx={{
                     display: { xs: 'block', sm: 'none' },
