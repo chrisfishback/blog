@@ -1,11 +1,11 @@
-import NavBar from "./NavBar.tsx";
+import SidePanel from "./SidePanel/View/SidePanel.tsx";
 import Content from "./Content.tsx";
 
 function Home () {
 
     return (
         <>
-            <NavBar/>
+            <SidePanel/>
             <Content/>
         </>
     )

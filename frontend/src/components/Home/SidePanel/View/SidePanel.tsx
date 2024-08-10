@@ -1,49 +1,36 @@
 import {AppBar, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import {useState} from "react";
+import useSidePanelModel from "../Model/useSidePanelModel.ts";
 
-function NavBar() {
+function SidePanel() {
+    const {
+        mobileOpen,
+        drawerWidth,
+        handleDrawerClose,
+        handleDrawerTransitionEnd,
+        handleDrawerToggle
+    } = useSidePanelModel();
 
     const drawerContent = (
         <h1>Drawer Content</h1>
     )
-
-    const [mobileOpen, setMobileOpen] = useState(false);
-    const [isClosing, setIsClosing] = useState(false);
-    let drawerWidth = 240
-
-
-    const handleDrawerClose = () => {
-        setIsClosing(true);
-        setMobileOpen(false);
-    };
-
-    const handleDrawerTransitionEnd = () => {
-        setIsClosing(false);
-    };
-
-    const handleDrawerToggle = () => {
-        if (!isClosing) {
-            setMobileOpen(!mobileOpen);
-        }
-    };
 
     return (
         <>
             <AppBar
                 position="fixed"
                 sx={{
-                    width: { sm: `calc(100% - ${drawerWidth}px)` },
-                    ml: { sm: `${drawerWidth}px` },
+                    width: '100%',
+                    display: { xs: 'block', sm: 'none' }
                 }}
             >
                 <Toolbar>
                     <IconButton
                         color="inherit"
-                        aria-label="open blog title list"
+                        aria-label="log list side panel button"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        sx={{ mr: 2 }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -81,4 +68,4 @@ function NavBar() {
     )
 }
 
-export default NavBar
+export default SidePanel
