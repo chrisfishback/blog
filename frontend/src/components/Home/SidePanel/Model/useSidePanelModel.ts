@@ -1,9 +1,10 @@
 import {useState} from "react";
 
-function useSidePanelModel() {
+export const drawerWidth = 240;
+
+export function useSidePanelModel() {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
-    const drawerWidth = 240;
 
     const handleDrawerClose = () => {
         setIsClosing(true);

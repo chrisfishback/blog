@@ -1,4 +1,4 @@
-import {AppBar, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
+import {AppBar, Box, Button, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import useSidePanelModel from "../Model/useSidePanelModel.ts";
 
@@ -12,7 +12,12 @@ function SidePanel() {
     } = useSidePanelModel();
 
     const drawerContent = (
-        <h1>Drawer Content</h1>
+        <>
+            <Typography variant={'h4'} sx={{paddingY: 4}}>C Fish</Typography>
+            <Button sx={{paddingX: 1, color: 'black'}}>
+                <Typography variant={'h6'}>Title for this Blog Post</Typography>
+            </Button>
+        </>
     )
 
     return (
@@ -21,7 +26,7 @@ function SidePanel() {
                 position="fixed"
                 sx={{
                     width: '100%',
-                    display: { xs: 'block', sm: 'none' }
+                    display: {xs: 'block', sm: 'none'}
                 }}
             >
                 <Toolbar>
@@ -30,9 +35,9 @@ function SidePanel() {
                         aria-label="log list side panel button"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2 }}
+                        sx={{mr: 2}}
                     >
-                        <MenuIcon />
+                        <MenuIcon/>
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
                         C FISH
@@ -48,8 +53,8 @@ function SidePanel() {
                     keepMounted: true
                 }}
                 sx={{
-                    display: { xs: 'block', sm: 'none' },
-                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                    display: {xs: 'block', sm: 'none'},
+                    '& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth},
                 }}
             >
                 {drawerContent}
@@ -57,8 +62,8 @@ function SidePanel() {
             <Drawer
                 variant="permanent"
                 sx={{
-                    display: { xs: 'none', sm: 'block' },
-                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                    display: {xs: 'none', sm: 'block'},
+                    '& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth},
                 }}
                 open
             >
