@@ -1,4 +1,4 @@
-package fish.see.blog.blogPost;
+package fish.see.blog.BlogPost;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

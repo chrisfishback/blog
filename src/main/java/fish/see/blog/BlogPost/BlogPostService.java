@@ -1,6 +1,9 @@
-package fish.see.blog.blogPost;
+package fish.see.blog.BlogPost;
 
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+
 
 @Service
 public class BlogPostService {
@@ -14,4 +17,6 @@ public class BlogPostService {
     public BlogPost createBlogPost(BlogPost blogPost) {
         return blogPostRepository.save(blogPost);
     }
+
+    public List<BlogPost> getAllBlogPosts() { return blogPostRepository.findAll(); }
 }

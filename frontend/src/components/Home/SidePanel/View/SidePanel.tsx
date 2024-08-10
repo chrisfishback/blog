@@ -24,9 +24,11 @@ function SidePanel() {
         <>
             <AppBar
                 position="fixed"
+                elevation={0}
                 sx={{
                     width: '100%',
-                    display: {xs: 'block', sm: 'none'}
+                    display: {xs: 'block', sm: 'none'},
+                    backgroundColor: '#1E1656'
                 }}
             >
                 <Toolbar>
