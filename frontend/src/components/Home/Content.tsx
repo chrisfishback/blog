@@ -12,6 +12,8 @@ function Content() {
                 width: { sm: `calc(100% - ${drawerWidth}px)` },
                 ml: { sm: `${drawerWidth}px` },
                 p: 3,
+                backgroundColor: '#d3d3d3',
+                borderRadius: 3,
             }}
         >
             <Typography variant={'h2'}>{title}</Typography>

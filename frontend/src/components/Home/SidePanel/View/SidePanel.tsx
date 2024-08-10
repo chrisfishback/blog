@@ -1,4 +1,4 @@
-import {AppBar, Box, Button, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
+import {AppBar, Button, Drawer, IconButton, Toolbar, Typography} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import useSidePanelModel from "../Model/useSidePanelModel.ts";
 
